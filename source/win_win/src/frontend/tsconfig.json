@@ -11,7 +11,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
@@ -23,6 +23,11 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
+      "@reducer/*": ["src/reducers/*"],
+      "@helper/*": ["src/helpers/*"],
+      "@container/*": ["src/containers/*"],
+      "@type/*": ["src/types/*"],
+      "@action/*": ["src/actions/*"]
     }
   },
   "include": [

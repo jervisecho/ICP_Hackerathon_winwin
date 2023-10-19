@@ -1,8 +1,8 @@
 import { defineConfig } from "vite"
 import reactRefresh from "@vitejs/plugin-react-refresh"
-import path from "path"
+import * as path from "path"
 import dfxJson from "../../dfx.json"
-import fs from "fs"
+import * as fs from "fs"
 
 const isDev = process.env["DFX_NETWORK"] !== "ic"
 
@@ -68,6 +68,11 @@ export default defineConfig({
   plugins: [reactRefresh()],
   resolve: {
     alias: [
+      { find: "@type", replacement: path.resolve(__dirname, "src/types") },
+      { find: "@action", replacement: path.resolve(__dirname, "src/actions") },
+      { find: "@reducer", replacement: path.resolve(__dirname, "src/reducers") },
+      { find: "@helper", replacement: path.resolve(__dirname, "src/helpers") },
+      { find: "@container", replacement: path.resolve(__dirname, "src/containers") },
       // Here we tell Vite the "fake" modules that we want to define
     ],
   },

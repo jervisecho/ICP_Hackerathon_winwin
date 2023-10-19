@@ -1,6 +1,5 @@
 // export default App;
-import React from "react"
-import logo from "./assets/dfinity.svg"
+import * as React from "react"
 
 declare global {
   interface Window {
@@ -11,7 +10,7 @@ declare global {
 function App() {
   return (
     <div className="App">
-      Test Page
+      Test Page AAAA
     </div>
   )
 }
