@@ -6,7 +6,19 @@
             "candid": "src/backend/index.did",
             "wasm": ".azle/win_win/win_win.wasm",
             "gzip": true
-        }
+        },
+        "frontend": {
+          "dependencies": [
+            
+            ],
+          "frontend": {
+            "entrypoint": "src/frontend/index.html"
+          },
+          "source": [
+            "src/frontend/dist"
+          ],
+          "type": "assets"
+      }
     },
     "defaults": {
         "replica": {
