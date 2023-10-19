@@ -19,7 +19,7 @@
 - ICP Canister Architecture
   - Backend
     - Token
-    - NFT (예정)
+    - NFT (미정)
     - Service
   - Frontend
 - Web Architecture
