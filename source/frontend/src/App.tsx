@@ -5,6 +5,8 @@ import Home from "@container/home/home";
 import FooterContainer from "@container/footer/footer";
 import Create from "@container/create/create";
 import DetailContainer from "@container/detail/deatil";
+import ModalChallenge from "@container/modal/modal.challenge.tsx";
+import ModalFinish from "@container/modal/modal.finish.tsx";
 function App() {
 
     return (
@@ -17,6 +19,8 @@ function App() {
                     <Route path={"/detail"} element={<DetailContainer/>}/>
                 </Routes>
                 <FooterContainer />
+                <ModalChallenge />
+                <ModalFinish />
             </BrowserRouter>
         </div>
     )
