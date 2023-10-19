@@ -18,6 +18,8 @@ export default Canister({
             logo: event.logo,
             category: event.category,
             price: event.price,
+            creator: principal,
+            finish: false,
             transactions: []
         };
         events.insert(id, new_event);
