@@ -19,6 +19,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "allowImportingTsExtensions": true,
     "noEmit": true,
     "jsx": "react",
     "baseUrl": ".",
@@ -31,6 +32,9 @@
     }
   },
   "include": [
-    "./*"
-    , "src/helper", "src/containers"  ],
+    "./*", 
+    "src/helper/*",
+    "src/containers/*" ,
+    "src/types/*"
+  ],
 }

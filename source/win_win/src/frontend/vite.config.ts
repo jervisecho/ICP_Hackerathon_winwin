@@ -1,8 +1,8 @@
 import { defineConfig } from "vite"
 import reactRefresh from "@vitejs/plugin-react-refresh"
-import * as path from "path"
+import path from "path"
 import dfxJson from "../../dfx.json"
-import * as fs from "fs"
+import fs from "fs"
 
 const isDev = process.env["DFX_NETWORK"] !== "ic"
 

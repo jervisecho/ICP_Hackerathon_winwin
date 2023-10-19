@@ -1,6 +1,8 @@
 // export default App;
-import * as React from "react"
+import React from "react"
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+import Header from "@container/Header/Header"
 declare global {
   interface Window {
     ic: any;
@@ -10,7 +12,12 @@ declare global {
 function App() {
   return (
     <div className="App">
-      Test Page AAAA
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<div>Home</div>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
