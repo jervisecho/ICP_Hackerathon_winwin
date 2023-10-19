@@ -1,4 +1,5 @@
 import HeaderConnect from "@container/header/header.connect.tsx";
+import {Link} from "react-router-dom";
 
 const HeaderContainer = () => {
     return (
@@ -17,7 +18,7 @@ const HeaderContainer = () => {
                                 <a href="index.html" className="nav-link active">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a href="create.html" className="nav-link">Create</a>
+                                <Link to={"/create"} className="nav-link">Create</Link>
                             </li>
                         </ul>
                     </div>
