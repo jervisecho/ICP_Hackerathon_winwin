@@ -1,5 +1,5 @@
-import CreateForm from "@container/create/create.form.tsx";
-import ShapeComponent from "@container/common/shape.tsx";
+import CreateForm from "@container/create/create.form";
+import ShapeComponent from "@container/common/shape";
 
 const CreateContainer = () => {
     return (

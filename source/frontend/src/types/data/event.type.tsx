@@ -1,4 +1,4 @@
-import {Transaction} from "@type/data/transaction.type.tsx";
+import {Transaction} from "@type/data/transaction.type";
 
 export type Event = {
     id: string;

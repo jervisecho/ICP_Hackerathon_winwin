@@ -1,13 +1,13 @@
-import HomeJumbotron from "@container/home/home.jumbotron.tsx";
-import useScript from "@helper/useScript.tsx";
-import HomeSelect from "@container/home/home.select.tsx";
-import HomeItem from "@container/home/home.item.tsx";
+import HomeJumbotron from "@container/home/home.jumbotron";
+import useScript from "@helper/useScript";
+import HomeSelect from "@container/home/home.select";
+import HomeItem from "@container/home/home.item";
 import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "@reducer/root.reducer.tsx";
+import {RootState} from "@reducer/root.reducer";
 import {useEffect} from "react";
-import {onGetEventAction} from "@action/home.action.tsx";
-import {testData} from "@container/home/home.test.tsx";
-import ShapeComponent from "@container/common/shape.tsx";
+import {onGetEventAction} from "@action/home.action";
+import {testData} from "@container/home/home.test";
+import ShapeComponent from "@container/common/shape";
 
 
 const HomeContainer = () => {

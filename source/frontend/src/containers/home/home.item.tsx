@@ -1,4 +1,4 @@
-import {Event} from "@type/data/event.type.tsx";
+import {Event} from "@type/data/event.type";
 import {Link} from "react-router-dom";
 
 const HomeItemComponent = (props: { event: Event }) => {

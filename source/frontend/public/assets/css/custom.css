@@ -24,6 +24,8 @@
     --bs-gray-800: #272D43;
     --bs-gray-900: #1A1E30;
     --bs-primary: #528ff0; !important;
+    --bs-primary-rgb:82, 143, 240; !important;
+
 }
 
 .btn-primary {
@@ -63,6 +65,12 @@
 .btn-circle-ripple.btn-primary::before,
 .btn-circle-ripple.btn-outline-primary::before {
     box-shadow: 0 0 0 1px #528ff0 !important;
+}
+
+.bg-primary {
+
+    /*background-color: rgba(rgb(82, 143, 240), var(--bs-bg-opacity)) !important;*/
+    /*color: #528ff0;*/
 }
 
 /* 파일 업로드 */

@@ -1,7 +1,10 @@
-import HeaderConnect from "@container/header/header.connect.tsx";
-import {Link} from "react-router-dom";
+import HeaderConnect from "@container/header/header.connect";
+import {Link, useLocation} from "react-router-dom";
+import useScript from "@helper/useScript.tsx";
 
 const HeaderContainer = () => {
+    useScript("/assets/js/theme.bundle.min.js");
+    const {pathname} = useLocation();
     return (
         <header className="z-fixed header-absolute-top header-transparent sticky-reverse">
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -15,10 +18,10 @@ const HeaderContainer = () => {
                     <div className="collapse navbar-collapse" id="mainNavbarTheme">
                         <ul className="navbar-nav me-lg-3 ms-lg-auto">
                             <li className="nav-item">
-                                <a href="index.html" className="nav-link active">Home</a>
+                                <Link to={"/detail"} className={!pathname.includes('create') ? "nav-link active" : 'nav-link'}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={"/create"} className="nav-link">Create</Link>
+                                <Link to={"/create"} className={pathname.includes('create') ? "nav-link active" : 'nav-link' }>Create</Link>
                             </li>
                         </ul>
                     </div>
