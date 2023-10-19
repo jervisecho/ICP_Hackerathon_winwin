@@ -5,6 +5,7 @@ export const User = Record({
 });
 
 export const Challenge = Record({
+    id: Principal,
     pic: text,
     challenger: Principal,
 });

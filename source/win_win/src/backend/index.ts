@@ -87,6 +87,33 @@ export default Canister({
         }
         return eventOpt.Some.transactions;
     }),
+
+    createTransaction: update([Principal, Challenge], bool, (principal, challenge) => {
+        const eventOpt = events.get(principal);
+        if ('None' in eventOpt) {
+            return false;
+        }
+        const event = eventOpt.Some;
+        const id = generateId();
+        const new_challenge: typeof Challenge = {
+            id: id,
+            pic: challenge.pic,
+            challenger: challenge.challenger,
+        };
+        const new_event: typeof Event = {
+            id: event.id,
+            name: event.name,
+            location: event.location,
+            logo: event.logo,
+            category: event.category,
+            price: event.price,
+            creator: event.creator,
+            finish: event.finish,
+            transactions: [...event.transactions, challenge]
+        };
+        events.insert(principal, new_event);
+        return true;
+    }),
 });
 
 function generateId(): Principal {
